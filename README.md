@@ -1,2 +1,2 @@
-# argocd-hello-application
-Argo CD dummy application 
+# argocd-applications
+Argo CD dummy applications
