@@ -16,4 +16,4 @@ spec:
       - name: busybox
         image: busybox
         command: ["/bin/sh", "-c"]
-        args: ["echo Hello && sleep 600"]
+        args: ["echo Hello2 && sleep 600"]
