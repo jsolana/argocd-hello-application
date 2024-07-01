@@ -16,7 +16,7 @@ spec:
   - git:
       repoURL: https://github.com/jsolana/argocd-applications.git
       directories:
-      - path: busibox/*
+      - path: busybox/*
   template:
     metadata:
       name: '{{path.basename}}'
