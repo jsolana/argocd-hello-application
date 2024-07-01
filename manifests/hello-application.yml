@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: busybox-echo
+  namespace: argocd
+spec:
+  destination:
+    namespace: busybox-echo
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: busybox/dev
+    repoURL: https://github.com/jsolana/argocd-applications
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      allowEmpty: true
+      prune: true
+    retry:
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 1m
+      limit: 2
+    syncOptions:
+    - CreateNamespace=true
