@@ -3,7 +3,7 @@
 Argo CD dummy applications
 
 
-## ApplicationSet's
+## ApplicationSet's
 
 This example demonstrates the git directory generator:
 
