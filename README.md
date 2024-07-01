@@ -9,7 +9,11 @@ Requirements:
     brew install kind
     kind create cluster
     kubectl create namespace argocd
-    kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.12.0-rc2/manifests/install.yaml
+
+    # install specific version
+    # kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.12.0-rc2/manifests/install.yaml
+
+    kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
     kubectl port-forward svc/argocd-server -n argocd 8080:443
     kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath='{.data.password}' | base64 -d
