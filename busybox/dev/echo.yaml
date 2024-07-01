@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: busybox-echo
+  name: busybox-dev-echo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: busybox-echo
+      app: busybox-dev-echo
   template:
     metadata:
       labels:
-        app: busybox-echo
+        app: busybox-dev-echo
     spec:
       containers:
       - name: busybox
         image: busybox
         command: ["/bin/sh", "-c"]
-        args: ["echo Hello2 && sleep 600"]
+        args: ["echo Hello Dev && sleep 5"]
